@@ -1,0 +1,15 @@
+label {
+  display: block;
+}
+
+input, textarea {
+  border: 1px solid grey;
+  resize: none;
+}
+
+button {
+  border: 1px solid grey;
+  background: #F2F2F2;
+  font-family: inherit;
+  padding: 5px;
+}

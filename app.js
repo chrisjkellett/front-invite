@@ -3,6 +3,7 @@ const app = express();
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response) => {
   response.render('index');
