@@ -5,6 +5,7 @@ label {
 input, textarea {
   border: 1px solid grey;
   resize: none;
+  display: block;
 }
 
 button {
