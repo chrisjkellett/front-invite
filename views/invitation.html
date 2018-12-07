@@ -5,10 +5,18 @@
   <title>Express app</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="/styles.css" />
+  <style>
+  body{
+    background: url(<%=image%>);
+  }
+  </style>
 </head>
 
 <body>
-  <h1><%=title%></h1>
+  <div id="invite">
+    <h1><%=title%></h1>
+    <p><%=description%></p> 
+  </div>
 </body>
 </html>

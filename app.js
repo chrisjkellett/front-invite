@@ -1,5 +1,12 @@
 const express = require('express');
 const app = express();
+const urls = require('./public/urls');
+
+const images = {
+  gentlePeach: urls.gentlePeach,
+  greenSwirls: urls.greenSwirls,
+  flowers: urls.flowers,
+}
 
 app.use(express.urlencoded({extended: true}));
 
@@ -14,12 +21,12 @@ app.get('/', (req, res) => {
 
 
 app.post('/invite', (req, res) => {
-  const {title, description} = req.body;
-  res.redirect(`/invitation/?title=${title}&description=${description}`);
+  const {title, description, image} = req.body;
+  res.redirect(`/invitation/?title=${title}&description=${description}&image=${image}`);
 });
 
 app.get('/invitation/', (req, res) => {
-  res.render('invitation', {...req.query})
+  res.render('invitation', {...req.query, image: images[req.query.image]})
 });
 
 
