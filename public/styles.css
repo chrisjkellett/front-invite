@@ -1,11 +1,19 @@
+form {
+  display: flex;
+  justify-content: center;
+}
+
 label {
   display: block;
 }
 
-input, textarea {
+input, textarea, select {
   border: 1px solid grey;
   resize: none;
   display: block;
+  font-family: inherit;
+  font-size: inherit;
+
 }
 
 button {
